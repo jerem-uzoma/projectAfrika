@@ -4,14 +4,16 @@
     </head>
     <body>
         <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+            <h1><a href="/">Blog</a></h1>
         </div>
-        {% for list in lists %}
-        <div>
-            <p>First Name: {{ list.first }}</p>
-            <p>Last Name: {{ list.last }}</p>
-            <p>Email: {{ list.email }}</p>
-        </div>
+        {% for field in form %}
+            <div class="fieldWrapper">
+                {{ field.label }}
+                {{ field.label_tag }} {{ field }}
+                {% if field.help_text %}
+                <p class="help">{{ field.help_text|safe }}</p>
+                {% endif %}
+            </div>
         {% endfor %}
         </div>
     </body>

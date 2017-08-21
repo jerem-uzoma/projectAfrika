@@ -11,5 +11,5 @@ def contact_form(request):
     return render(request, 'app1/contact.html',{'form':form_class})
 
 def contact_list(request):
-    lists = ContactForm.objects.all
-    return render(request, 'app1/list.html', {'list': lists})
+    lists = ContactForm
+    return render(request, 'app1/lists.html', {'list': lists})
