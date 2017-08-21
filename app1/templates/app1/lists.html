@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title> ProjectAfrika</title>
+    </head>
+    <body>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+        {% for list in lists %}
+        <div>
+            <p>First Name: {{ list.first }}</p>
+            <p>Last Name: {{ list.last }}</p>
+            <p>Email: {{ list.email }}</p>
+        </div>
+        {% endfor %}
+        </div>
+    </body>
+</html>
