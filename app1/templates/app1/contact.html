@@ -7,12 +7,16 @@
             <h1><a href="/">Contact Us</a></h1>
         </div>
         <div>
-            First Name:
-			{{first}}
-			Last Name:
-			{{last}}
-			Email:
-			{{email}}
+            {% block title %}Contact - {{ block.super }}{% endblock %}
+
+            {% block content %}
+            <h1>Contact</h1>
+            <form role="form" action="" method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Submit</button>
+            </form>
+            {% endblock %}
         </div>
         </div>
     </body>

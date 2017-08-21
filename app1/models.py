@@ -15,8 +15,8 @@ class Post(models.Model):
     def __str__(self):
 	    return self.title
 		
-class Contact(forms.Form):
-    email = forms.EmailField(required=True)
-    first = forms.CharField(required=True)
-    last = forms.CharField(required=True)
+#class Contact(models.Model):
+   # email = models.EmailField(max_length=255, blank=True))
+   # first = models.CharField(required=True)
+   # last = models.CharField(required=True)
 # Create your models here.
